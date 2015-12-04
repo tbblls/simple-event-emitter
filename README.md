@@ -2,15 +2,14 @@
 
 ## Usage:
 
-````
-Evts.AddListener("notificationEvent", document.body, handleHashLinks);
-Evts.FireEvent("notificationEvent");
-Evts.RemoveListener("notificationEvent");
+````javascript
 
-function handleHashLinks() {
-  // remove a href click events
-  $( "a[href^=\"#\"]" ).off( "click", click);
-  // add a href click events
-  $( "a[href^=\"#\"]" ).on( "click", click);
+See.AddListener("notificationEvent", document.body, handler);
+See.FireEvent("notificationEvent");
+See.RemoveListener("notificationEvent");
+
+function handler() {
+  console.log('Event fired!');
 }
+
 ````
