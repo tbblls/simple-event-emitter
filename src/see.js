@@ -1,6 +1,8 @@
+var _ = require('lodash');
+
 ;(function(){
   'use strict';
-  var Evts = {};
+  var See = {};
   var events = [];
   
   function subscribe(name, elem, func){
@@ -32,7 +34,7 @@
   }
   
   // add new event
-  Evts.AddListener = function(name, elem, func){
+  See.AddListener = function(name, elem, func){
     var listener = {
       Event: addEvent(name),
       Name: name,
@@ -50,7 +52,7 @@
   
   
   // fire event
-  Evts.FireEvent = function(name){
+  See.FireEvent = function(name){
     try{
       var event = getEvent(name);
 			if(event){
@@ -69,13 +71,13 @@
   }
   
   // remove event
-  Evts.RemoveListener = function(name){
+  See.RemoveListener = function(name){
     var index = getEventIndex(name);		
     events.splice(index, 1); 
     return events;
   }
 
   // add to global
-  window.Evts = Evts;
+  window.See = See;
     
 }());
