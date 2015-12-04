@@ -74,10 +74,7 @@ module.exports = (function(){
     var index = getEventIndex(name);		
     events.splice(index, 1); 
     return events;
-  }
-
-  // add to global
-  window.See = See;
+  }  
     
 }());
 
