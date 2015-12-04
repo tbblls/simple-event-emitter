@@ -2,7 +2,7 @@
 
 ## Usage:
 
-Evts.AddListener("notificationEvent", document.body, handleHashLinks);
+````Evts.AddListener("notificationEvent", document.body, handleHashLinks);
 Evts.FireEvent("notificationEvent");
 Evts.RemoveListener("notificationEvent");
 
@@ -12,3 +12,4 @@ function handleHashLinks() {
   // add a href click events
   $( "a[href^=\"#\"]" ).on( "click", click);
 }
+````
