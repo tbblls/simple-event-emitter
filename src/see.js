@@ -1,6 +1,6 @@
 var _ = require('lodash');
 
-(function(){
+module.exports = (function(){
   'use strict';
   var See = {};
   var events = [];
@@ -75,6 +75,8 @@ var _ = require('lodash');
     events.splice(index, 1); 
     return events;
   }  
+  
+  return See;
     
-}())
+}());
 
