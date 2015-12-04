@@ -1,6 +1,7 @@
-# simple-event-emitter
+# SEE  
+## Simple event emitter
 
-## Usage:
+### Usage:
 
 ````javascript
 
