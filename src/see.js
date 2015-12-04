@@ -1,6 +1,6 @@
 var _ = require('lodash');
 
-;(function(){
+module.exports = (function(){
   'use strict';
   var See = {};
   var events = [];
@@ -43,8 +43,7 @@ var _ = require('lodash');
 		var event = getEvent(name);
     if(!event){
       events.push(listener);
-      var args = getArray(arguments);
-      subscribe(...args);
+      subscribe(name, elem, func);
     }
 
     return events;
@@ -81,3 +80,4 @@ var _ = require('lodash');
   window.See = See;
     
 }());
+
