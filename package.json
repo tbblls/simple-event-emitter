@@ -1,8 +1,8 @@
 {
   "name": "simple-event-emitter",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Simple Event Emitter",
-  "main": "./src/see.js",
+  "main": "src/see.js",
   "dependencies": {
     "babel-polyfill": "^6.2.0",
     "babel-runtime": "^6.2.0",
