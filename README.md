@@ -2,7 +2,8 @@
 
 ## Usage:
 
-````Evts.AddListener("notificationEvent", document.body, handleHashLinks);
+````
+Evts.AddListener("notificationEvent", document.body, handleHashLinks);
 Evts.FireEvent("notificationEvent");
 Evts.RemoveListener("notificationEvent");
 
