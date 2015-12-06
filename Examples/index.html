@@ -10,6 +10,7 @@
 		</div>
 		<script type="text/javascript" src="../dist/see.js" ></script>
 		<script type="text/javascript" >
+			
 			// Custom event handler
 			var eventHandler = function(){
 				//Do some task
@@ -20,21 +21,21 @@
 			function doSomething(){
 				console.log("do Something");
 				// fire event
-				See.FireEvent( "firstEvent" );
+				SEE.FireEvent( "firstEvent" );
 			}
 			function doSomethingElse(){
 				console.log("do Something Else");			
 				// fire event
-				See.FireEvent( "firstEvent" );
+				SEE.FireEvent( "firstEvent" );
 			}
 			function doAnotherThing(){
 				console.log("do Another Thing");				
 				// fire event
-				See.FireEvent( "firstEvent" );
+				SEE.FireEvent( "firstEvent" );
 			}
 			
 			// Add event
-			See.AddListener("firstEvent", document.body, eventHandler);
+			SEE.AddListener("firstEvent", document.body, eventHandler);
 		</script>
 	</body>
 </html>

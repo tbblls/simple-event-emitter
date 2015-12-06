@@ -29,10 +29,6 @@ module.exports = (function(){
     }
   }
   
-  var getArray = function(args){
-    return Array.prototype.slice.call(args);
-  }
-  
   // add new event
   See.AddListener = function(name, elem, func){
     var listener = {
@@ -45,10 +41,9 @@ module.exports = (function(){
       events.push(listener);
       subscribe(name, elem, func);
     }
-
     return events;
   }
-  
+
   
   // fire event
   See.FireEvent = function(name){
@@ -75,7 +70,7 @@ module.exports = (function(){
     events.splice(index, 1); 
     return events;
   }  
-  
+  window.SEE = See;   
   return See;
     
 }());
