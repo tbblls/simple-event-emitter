@@ -3,9 +3,11 @@
 
 ### Install:
 
-''''
+```
+
 npm install simple-event-emitter
-''''
+
+```
 
 ### Usage:
 
@@ -25,10 +27,12 @@ function handler() {
 
 To build:
 
-''''
+```
+
 1. npm install
 2. webpack && webpack --no-minimize
-''''
+
+```
 
 This outputs two files to the ./dist directory.
 - see.js
