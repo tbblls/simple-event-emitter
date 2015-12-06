@@ -29,8 +29,8 @@ To build:
 
 ```
 
-1. npm install
-2. webpack && webpack --no-minimize
+npm install
+webpack && webpack --no-minimize
 
 ```
 
