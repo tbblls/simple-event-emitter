@@ -16,12 +16,21 @@
 				//Do some task
 				console.log( "My custom event worked!" );
 			}
+			var eventHandler2 = function(){
+				//Do some task
+				console.log( "My other custom event worked!" );
+			}
+			var eventHandler3 = function(){
+				//Do some task
+				console.log( "My last event worked!" );
+			}
 			
 			// Handle button clicks
 			function doSomething(){
 				console.log("do Something");
 				// fire event
-				SEE.FireEvent( "firstEvent" );
+				SEE.FireEvent( "firstEvent" )
+				   .FireEvent( "secondEvent" );
 			}
 			function doSomethingElse(){
 				console.log("do Something Else");			
@@ -35,7 +44,13 @@
 			}
 			
 			// Add event
-			SEE.AddListener("firstEvent", document.body, eventHandler);
+			SEE.AddListener( "firstEvent" ,  document.body, eventHandler)
+			   .AddListener( "secondEvent" , document.body, eventHandler2)
+			   .AddListener( "thirdEvent" ,  document.body, eventHandler3)
+			   .FireEvent( "thirdEvent" )
+			   .RemoveListener( "thirdEvent" );
+			
+			
 		</script>
 	</body>
 </html>

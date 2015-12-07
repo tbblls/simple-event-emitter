@@ -44,8 +44,8 @@ module.exports = (function(){
       events.push(listener);
       subscribe(name, elem, func);
     }
-    return events;
-  }
+    return this;
+  };
 
   
   // fire event
@@ -54,25 +54,25 @@ module.exports = (function(){
       var event = getEvent(name);
 			if(event){
         event.Element.dispatchEvent(event.Event);
-        return { success: true, message: 'Event has been fired.' };
+        return this;
       }
-      else{
-        return { success: false, message: 'Event not found.' };
+      else {
+        return this;
       }
       
     }
     catch(error){
       return { success: false, message: 'Error occured while attempting to fire event.', error: error };
     }
-    
-  }
+  };
   
   // remove event
   See.RemoveListener = function(name){
     var index = getEventIndex(name);		
     events.splice(index, 1); 
-    return events;
-  }  
+    return this;
+  };
+  
   window.SEE = See;   
   return See;
     
