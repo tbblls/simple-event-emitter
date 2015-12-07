@@ -17,6 +17,14 @@ SEE.AddListener("notificationEvent", document.body, handler);
 SEE.FireEvent("notificationEvent");
 SEE.RemoveListener("notificationEvent");
 
+SEE.AddListener("notificationEvent", document.body, handler)
+   .AddListener("buildEvent", document.body, handler)
+   .AddListener("routeEvent", document.body, handler)
+   .AddListener("closingEvent", document.body, handler);
+
+SEE.FireEvent("notificationEvent")
+   .FireEvent("closingEvent");
+
 function handler() {
   console.log('Event fired!');
 }
