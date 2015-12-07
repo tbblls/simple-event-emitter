@@ -11,7 +11,7 @@ npm install simple-event-emitter
 
 ### Usage:
 
-````javascript
+```javascript
 
 SEE.AddListener("notificationEvent", document.body, handler);
 SEE.FireEvent("notificationEvent");
@@ -21,7 +21,7 @@ function handler() {
   console.log('Event fired!');
 }
 
-````
+```
 
 ### Build
 

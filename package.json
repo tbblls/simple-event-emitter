@@ -4,6 +4,7 @@
   "description": "Simple Event Emitter",
   "main": "dist/see.js",
   "dependencies": {
+    "custom-event-polyfill": "^0.2.1",
     "lodash": "^3.10.1"
   },
   "devDependencies": {

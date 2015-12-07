@@ -5,6 +5,10 @@ module.exports = (function(){
   var See = {};
   var events = [];
   
+    // Polyfill for creating CustomEvents on IE9/10/11
+  require('custom-event-polyfill');
+
+
   function subscribe(name, elem, func){
     elem.addEventListener(name, func, false);
   }
