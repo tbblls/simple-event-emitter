@@ -12,8 +12,8 @@ module.exports = (function(){
   var See = {};
   var events = [];
   
-  function subscribe(name, elem, func){
-    elem.addEventListener(name, func, false);
+  function subscribe(listener, func){
+    listener.Element.addEventListener(listener.Name, func, false);
   }
   
   function addEvent(name){
@@ -33,17 +33,23 @@ module.exports = (function(){
  
   
   // add new event
-  See.AddListener = function(name, elem, func){
+  See.AddListener = function(name, func, elem){
+    // Events are added to the document body by default 
+    var element = elem ? elem : document.body;
+    
     var listener = {
       Event: addEvent(name),
-      Name: name,
-      Element: elem
+      Name: name,      
+      Element: element
     };
+    
 		var event = getEvent(name);
+    
     if(!event){
       events.push(listener);
-      subscribe(name, elem, func);
+      subscribe(listener, func);
     }
+    
     return this;
   };
 

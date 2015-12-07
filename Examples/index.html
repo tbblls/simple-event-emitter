@@ -44,9 +44,9 @@
 			}
 			
 			// Add event
-			SEE.AddListener( "firstEvent" ,  document.body, eventHandler)
-			   .AddListener( "secondEvent" , document.body, eventHandler2)
-			   .AddListener( "thirdEvent" ,  document.body, eventHandler3)
+			SEE.AddListener( "firstEvent",  eventHandler)
+			   .AddListener( "secondEvent", eventHandler2)
+			   .AddListener( "thirdEvent",  eventHandler3)
 			   .FireEvent( "thirdEvent" )
 			   .RemoveListener( "thirdEvent" );
 			
