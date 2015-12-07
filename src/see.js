@@ -1,14 +1,17 @@
-var _ = require('lodash');
+// Array.prototype.find ES6 polyfill.
+require('array.prototype.find');
+
+// Array.prototype.findIndex ES6 polyfill.
+require('array.prototype.findindex');
+
+// Polyfill for creating CustomEvents on IE9/10/11
+require('custom-event-polyfill');
 
 module.exports = (function(){
   'use strict';
   var See = {};
   var events = [];
   
-    // Polyfill for creating CustomEvents on IE9/10/11
-  require('custom-event-polyfill');
-
-
   function subscribe(name, elem, func){
     elem.addEventListener(name, func, false);
   }
@@ -17,21 +20,17 @@ module.exports = (function(){
     return new CustomEvent(name);
   }
   
-  function getEventIndex(name){
-    return _.findIndex(events, function (event) {
+  function getEvent(name){
+    return events.find( function (event) {
       return event.Name === name;
     });
   }
-  
-  function getEvent(name){
-    var index = getEventIndex(name);
-    if(index > -1){
-      return events[index];
-    }
-    else{
-      return null;
-    }
+  function getEventIndex(name){
+    return events.findIndex( function (event) {
+      return event.Name === name;
+    });
   }
+ 
   
   // add new event
   See.AddListener = function(name, elem, func){

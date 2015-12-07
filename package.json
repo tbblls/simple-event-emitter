@@ -1,11 +1,12 @@
 {
   "name": "simple-event-emitter",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Simple Event Emitter",
   "main": "dist/see.js",
   "dependencies": {
-    "custom-event-polyfill": "^0.2.1",
-    "lodash": "^3.10.1"
+    "array.prototype.find": "^1.0.0",
+    "array.prototype.findindex": "^1.0.0",
+    "custom-event-polyfill": "^0.2.1"
   },
   "devDependencies": {
     "webpack": "^1.12.9"
