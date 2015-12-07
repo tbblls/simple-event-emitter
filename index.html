@@ -43,14 +43,14 @@ npm install simple-event-emitter
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage:</h2>
 
 <div class="highlight highlight-source-js"><pre>
-<span class="pl-smi">SEE</span>.<span class="pl-en">AddListener</span>(<span class="pl-s"><span class="pl-pds">"</span>notificationEvent<span class="pl-pds">"</span></span>, <span class="pl-smi">document</span>.<span class="pl-c1">body</span>, handler);
+<span class="pl-smi">SEE</span>.<span class="pl-en">AddListener</span>(<span class="pl-s"><span class="pl-pds">"</span>notificationEvent<span class="pl-pds">"</span></span>, handler);
 <span class="pl-smi">SEE</span>.<span class="pl-en">FireEvent</span>(<span class="pl-s"><span class="pl-pds">"</span>notificationEvent<span class="pl-pds">"</span></span>);
 <span class="pl-smi">SEE</span>.<span class="pl-en">RemoveListener</span>(<span class="pl-s"><span class="pl-pds">"</span>notificationEvent<span class="pl-pds">"</span></span>);
 
-<span class="pl-smi">SEE</span>.<span class="pl-en">AddListener</span>(<span class="pl-s"><span class="pl-pds">"</span>notificationEvent<span class="pl-pds">"</span></span>, <span class="pl-smi">document</span>.<span class="pl-c1">body</span>, handler)
-   .<span class="pl-en">AddListener</span>(<span class="pl-s"><span class="pl-pds">"</span>buildEvent<span class="pl-pds">"</span></span>, <span class="pl-smi">document</span>.<span class="pl-c1">body</span>, handler)
-   .<span class="pl-en">AddListener</span>(<span class="pl-s"><span class="pl-pds">"</span>routeEvent<span class="pl-pds">"</span></span>, <span class="pl-smi">document</span>.<span class="pl-c1">body</span>, handler)
-   .<span class="pl-en">AddListener</span>(<span class="pl-s"><span class="pl-pds">"</span>closingEvent<span class="pl-pds">"</span></span>, <span class="pl-smi">document</span>.<span class="pl-c1">body</span>, handler);
+<span class="pl-smi">SEE</span>.<span class="pl-en">AddListener</span>(<span class="pl-s"><span class="pl-pds">"</span>notificationEvent<span class="pl-pds">"</span></span>, handler)
+   .<span class="pl-en">AddListener</span>(<span class="pl-s"><span class="pl-pds">"</span>buildEvent<span class="pl-pds">"</span></span>, handler)
+   .<span class="pl-en">AddListener</span>(<span class="pl-s"><span class="pl-pds">"</span>routeEvent<span class="pl-pds">"</span></span>, handler)
+   .<span class="pl-en">AddListener</span>(<span class="pl-s"><span class="pl-pds">"</span>closingEvent<span class="pl-pds">"</span></span>, handler);
 
 <span class="pl-smi">SEE</span>.<span class="pl-en">FireEvent</span>(<span class="pl-s"><span class="pl-pds">"</span>notificationEvent<span class="pl-pds">"</span></span>)
    .<span class="pl-en">FireEvent</span>(<span class="pl-s"><span class="pl-pds">"</span>closingEvent<span class="pl-pds">"</span></span>);
