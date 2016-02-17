@@ -1,3 +1,6 @@
+**** This code is for learning purposes and should not be used in production code. ****
+
+
 # SEE  
 ## Simple event emitter
 
